@@ -1,4 +1,4 @@
-# sell TEST1111
+# sell
 
 > sell app
 
