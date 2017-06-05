@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-header></v-header>
-    <div class="tab borderone">
+    <div class="tab border-1px">
       <div class="tab-item">
         <a v-link="{path:'/goods'}">商品</a>
       </div>
@@ -18,6 +18,11 @@
 <script>
   import header from './components/header/header.vue'
   export default {
+    data(){
+      return{
+        seller:{}
+      }
+    },
     components: {
       'v-header':header  // html不允许使用关键字header
     }
