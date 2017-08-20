@@ -8,6 +8,7 @@ import seller from 'components/seller/seller'
 
 import 'common/stylus/index.styl'
 // 全局注册
+
 Vue.use(VueRouter)
 Vue.use(VueResource)
 

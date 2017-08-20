@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-header :seller='seller'></v-header>
+    <v-header></v-header>
     <div class="tab border-1px">
       <div class="tab-item">
         <a v-link="{path:'/goods'}">商品</a>
