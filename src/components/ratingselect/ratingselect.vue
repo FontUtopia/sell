@@ -1,5 +1,5 @@
 <template>
-	<div class="ratingselect">
+	<div class="ratingselect border-1px">
 		<div class="rating-type">
 			<span>{{desc.all}}</span>
 			<span>{{desc.positive}}</span>
@@ -44,3 +44,11 @@
 		}
 	}
 </script>
+<style lang="stylus" ref="stylesheet/stylus">
+	@import "../../common/stylus/mixin.styl"
+	.ratingselect
+		.rating-type
+			padding : 18px 0
+			margin : 0 18px
+			border-1px(rgba(7,17,27,0.1))
+</style>
