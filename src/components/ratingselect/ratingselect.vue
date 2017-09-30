@@ -1,9 +1,15 @@
 <template>
-	<div class="ratingselect border-1px">
-		<div class="rating-type">
-			<span>{{desc.all}}</span>
-			<span>{{desc.positive}}</span>
-			<span>{{desc.negative}}</span>
+	<div class="ratingselect">
+		<div class="rating-type border-1px">
+			<span class="block positive">{{desc.all}}
+				<span class="count">47</span>
+			</span>
+			<span class="block positive">{{desc.positive}}
+				<span class="count">47</span>
+			</span>
+			<span class="block positive">{{desc.negative}}
+				<span class="count">47</span>
+			</span>
 		</div>
 		<div class="switch">
 			<span class="icon-check_circle"></span>
@@ -12,8 +18,8 @@
 	</div>
 </template>
 <script type="text/ecmascript-6">
-	const POSITIVE = 0
-	const NEGATIVE = 1
+	// const POSITIVE = 0
+	// const NEGATIVE = 1
 	const ALL = 2
 	export default {
 	  props : {
@@ -51,4 +57,8 @@
 			padding : 18px 0
 			margin : 0 18px
 			border-1px(rgba(7,17,27,0.1))
+			font-size: 0
+			.block
+				display : inline-block
+				padding : 8px 12px/
 </style>
