@@ -22,9 +22,9 @@
       addCart(event){
         event.preventDefault()
         event.stopPropagation()
-        if(!event._constructed){
-          return
-        }
+//        if(!event._constructed){
+//          return
+//        }
 				if(!this.food.count){
           Vue.set(this.food,'count',1)
 				}else{
