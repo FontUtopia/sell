@@ -39,4 +39,4 @@ router.map({
 router.start(app, '#app')
 
 // 设置默认跳到googoods
-router.go('/goods')
+// router.go('/goods')

@@ -20,7 +20,7 @@
 				<div class="cartcontrol-wrapper">
 					<cartcontrol :food="food"></cartcontrol>
 				</div>
-				<div @click="addFirst" class="buy" v-show="!food.count || food.count===0">加入购物车</div>
+				<div @click="addFirst($event)" class="buy" v-show="!food.count || food.count===0">加入购物车</div>
 			</div>
 			<split v-show="food.info"></split>
 			<div class="info" v-show="food.info">
@@ -28,7 +28,7 @@
 				<p class="text">{{food.info}}</p>
 			</div>
 			<split></split>
-			<div class="ratings">
+			<div class="food-ratings">
 				<h1 class="title">商品评价</h1>
 				<ratingselect :select-type="selectType" :only-content="onlyContent" :desc="desc" :ratings="food.ratings"></ratingselect>
 				<div class="rating-wrapper">
@@ -109,7 +109,9 @@
           return
         }
         this.$dispatch('cart.add',event.target)
-        Vue.set(this.count,'count',1)
+        if(!this.food.count){
+          Vue.set(this.food,'count',1)
+        }
 			},
       needShow(type,text){
         if(this.onlyContent && !text){
@@ -242,7 +244,7 @@
 				padding : 0 8px
 				font-size : 12px
 				color : rgb(77,85,93)
-		.ratings
+		.food-ratings
 			padding-top : 18px
 			.title
 				line-height : 14px

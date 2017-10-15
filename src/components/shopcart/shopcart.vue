@@ -30,7 +30,7 @@
 					<li class="food" v-for="food in selectFoods">
 						<span class="name">{{food.name}}</span>
 						<div class="price">
-							<span>{{food.price*food.count}}</span>
+							<span>¥{{food.price*food.count}}</span>
 						</div>
 						<div class="cartcontrol-wrapper">
 							<cartcontrol :food="food"></cartcontrol>
@@ -348,7 +348,7 @@
 					font-size: 12px
 					color : rgb(0,160,220)
 			.list-content
-				padding : 0 18px
+				padding : 0 15px
 				max-height: 217px
 				overflow : hidden
 				background : #fff

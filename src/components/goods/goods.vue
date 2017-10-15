@@ -134,9 +134,9 @@
 				 },
          selectMenu(index,event){
 				   console.log(event)
-				   if(!event._constructed){
-							return
-					 }
+//				   if(!event._constructed){
+//							return
+//					 }
            let foodlist = this.$els.foodsWrapper.getElementsByClassName('food-list-hook')
 					 let el = foodlist[index]
 					 this.foodsScroll.scrollToElement(el,300)

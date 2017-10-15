@@ -84,6 +84,7 @@
 		},
 		methods:{
       showDetail(){
+
         this.detailShow = true
 			},
 			hideDetail(){

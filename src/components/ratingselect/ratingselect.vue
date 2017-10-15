@@ -69,8 +69,6 @@
 				this.$dispatch('ratingtype.select',type)
 			},
       toggleContent(event){
-        console.log(event)
-        console.log('click toggleContent')
 //        if(!event._constructed){
 //          return
 //        }
