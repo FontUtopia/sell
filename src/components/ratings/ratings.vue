@@ -135,6 +135,7 @@
 	.ratings
 		position : absolute
 		top: 174px
+		bottom : 0 // 同时设定top和bottom时就确定了视口的高度，这样scroll才会生效
 		left : 0
 		width : 100%
 		overflow : hidden
