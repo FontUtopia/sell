@@ -16,19 +16,29 @@
   </div>
 </template>
 <script>
+	import {urlParse} from 'common/js/util'
   import header from './components/header/header.vue'
   const ERR_OK = 0
   export default {
     data(){
       return{
-        seller:{}
+        seller:{
+          id:(() => {
+            let queryParam = urlParse()
+						console.log(queryParam)
+            return queryParam.id
+          })()
+        }
       }
     },
     created(){
-      this.$http.get('/api/seller').then((response) => {
+      this.$http.get('/api/seller?id='+this.seller.id).then((response) => {
         response = response.body
         if(response.errno===ERR_OK){
-          this.seller = response.data
+          // Object.assign从一个或多个sources对象中，复制所有自身可枚举的属性到target对象中，并返回这个target对象。
+					// 把seller中的新属性id也放到对全局seller对象中
+          this.seller = Object.assign({},this.seller,response.data)
+          //this.seller = response.data
         }
       })
     },
